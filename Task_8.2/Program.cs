@@ -18,18 +18,16 @@ namespace Task_8._2
             {
                 for (int i = 0; i < 10; i++)
                 {
-                    arrayIn[i] = random.Next();
+                    arrayIn[i] = random.Next(100);
                     sw.WriteLine(arrayIn[i]);
                 }
             }
-            int[] arrayOut = new int[10];
             using (StreamReader sr = new StreamReader(fileName))
             {
                 int sum = 0;
                 for (int i = 0; i < 10; i++)
                 {
-                    arrayOut[i] = Convert.ToInt32(sr.ReadLine());   
-                    sum += arrayOut[i];
+                    sum += Convert.ToInt32(sr.ReadLine());
                 }
                 Console.WriteLine(sum);
             }
